@@ -27,7 +27,7 @@
   Подсказка:
   Площадь треугольника равна 3 × 4/2 = 6. 
 */
-/*
+
 #include <iostream>
 #include <cstdlib>
 using namespace std;
@@ -44,43 +44,5 @@ int main()
     for(int i = 0; i < 6; i++)
         if(a <= mass[i][0] * mass[i][1] / 2 && b >= mass[i][0] * mass[i][1] / 2)
             cout << mass[i][0] << " " << mass[i][1] << " " << mass[i][2] << "\n";
-    return 0;
-}*/
-
-
-#include <iostream>
-#include <cmath>
- 
-int main()
-{
-    setlocale(LC_ALL, "Russian");
-    
-    int a1 = 0;
-    int a2 = 0;
-    
-    std::cout << "Введите два числа: ";    
-    std::cin >> a1 >> a2;
-    
-    if (a1 > a2)
-    {
-        int tmp = a2;
-        a2 = a1;
-        a1 = tmp;
-    }
-    
-    std::cout << "Пифагоровы тройки чисел от " 
-              << a1 << " до " << a2 << " включительно:" << std::endl;
-    for (int i = a1; i <= a2; i++)
-    {
-        for (int j = a1; j <= a2; j++)
-        {
-            for (int k = a1; k <= a2; k++)
-            {
-                if (i*i+j*j==k*k)  
-                    std::cout << "{ " << i << ";" << j << ";" << k << "}" <<std::endl; 
-            }
-        }
-    }
-   
     return 0;
 }
